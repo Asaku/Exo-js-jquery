@@ -1,4 +1,4 @@
-Exo 05 Javascript, Jquery & bootstrap
+Exo 02 Javascript, Jquery & bootstrap
 
 Créer une todo list.
 On peut ajouter, édité et supprimer des tâches.
