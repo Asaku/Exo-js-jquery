@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript exercice</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+function exo1()
+{
+  for (var i = 0; i < 500; i++) {
+    document.write("« Je dois faire des sauvegardes régulières de mes fichiers. »");
+    i++;
+  }
+}
+
+function exo2()
+{
+  for (var i = 1; i < 1005; i = i + 2) {
+    document.write(i);
+  }
+}
+
+function exo3()
+{
+  var n=13;
+
+  for (var i = 0; i < 10; i++) {
+
+    document.write(i*n);
+    document.write('<br/>');
+  }
+}
+
+function exo4() {
+  var nb;
+  nb = prompt();
+  alert(nb.length);
+
+  var nb;
+  nb = prompt("tapez un nombre");
+  if (nb%2 == 0)
+    document.write("le nombre est paire")
+  else
+    document.write("le nombre est impaire")
+}
+
+function exo5() {
+  var val = prompt ('tapez un nombre entre 10 et 20: ');
+  if(val < 20 && val > 10) {
+    alert('ok!');
+  } else {
+    alert('pas ok!');
+    toto();
+  }
+}
+
+function exo6() {
+  var nombre = prompt("Veuillez entrer un nombre:");
+
+  document.write("Les dix nombres suivants "+nombre+ " sont :");
+
+  for(var i=0; i<10; i++){
+    nombre++;
+    document.write(nombre+" ");
+  }
+}
+
+function exo7() {
+  var z
+  var nombre = prompt("Veuillez entrer un nombre:");
+  for(var i=0; i<10; i++){
+    z =  nombre*i;
+    document.write(z+"<br>");
+    }
+}
+
+function exo8() {
+  var nb = prompt("Nombre");
+
+  function sommeTotale(nb){
+    var total = 0;
+    for (var i = 0; i <= nb; i++) {
+      total = total + i;
+    }
+    return total;
+  }
+
+  alert(sommeTotale(nb));
+}
+
+function exo9() {
+  var n;
+  n = prompt("Age :");
+  if (n >=6 && n <=7) {
+    alert("poussin");
+  } else if (n >=8 && n <=9) {
+    alert("pupille");
+  } else if (n >=10 && n <=11) {
+    alert("minime");
+  } else if (n >=12) {
+    alert("cadet");
+  } else {
+    alert("erreur");
+  }
+}
+  </script>
+</html>
