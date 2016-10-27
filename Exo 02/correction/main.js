@@ -7,17 +7,19 @@ function getAllLocal() {
   return keys;
 }
 
-function listing() {
+(function listing(){
   var datas = getAllLocal();
   for (var variable in datas) {
     if (datas.hasOwnProperty(variable)) {
-      $('.listing').append('<li><label>'+datas[variable]+'</label><input type="button" data-id="'+variable+'" name="name" class="btn delete btn-danger" value="Remove"></li>');
+      $('.listing').append('<li class="list-group-item"><label>'+datas[variable]+'</label>' +
+          '<input type="button" data-id="'+variable+'" name="name" class="btn delete btn-danger pull-right" value="Remove"></li>');
     }
   }
-};
-listing();
+})();
 
-$('#checkAll').click( function() {
+$('#checkAll').submit(function(e) {
+  e.stopPropagation();
+  e.preventDefault();
   var newTodo = $('.add-todo').val();
   localStorage.setItem(new Date().valueOf(), newTodo);
   $('.add-todo').val('');
@@ -26,7 +28,6 @@ $('#checkAll').click( function() {
 
 $('.delete').click( function(){
   var idTodo = $(this).attr('data-id');
-  console.log(idTodo);
   localStorage.removeItem(idTodo);
   $(".listing").find("[data-id='" + idTodo + "']").parent('li').remove();
 });
