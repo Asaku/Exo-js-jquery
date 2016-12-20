@@ -15,12 +15,9 @@ $(function() {
         var content = calculatrice.val();
         var result = eval(content);
         calculatrice.val(result);
-
     });
-
 });
 
 function resetCal() {
     calculatrice.val("")
 }
-
