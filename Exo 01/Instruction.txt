@@ -14,4 +14,4 @@ Exo 01 Javascript Algo:
 		”Pupille” de 8 à 9 ans
 		”Minime” de 10 à 11 ans
 		”Cadet” après 12 ans
-
+- 11 Faire une calculatrice ex: http://www.supportduweb.com/ftp/ybouane/scripts_astuces/javascript/calculatrice/calculatrice.html
