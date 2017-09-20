@@ -13,7 +13,6 @@ function exo1()
 {
   for (var i = 0; i < 500; i++) {
     document.write("« Je dois faire des sauvegardes régulières de mes fichiers. »");
-    i++;
   }
 }
 
@@ -29,7 +28,6 @@ function exo3()
   var n=13;
 
   for (var i = 0; i < 10; i++) {
-
     document.write(i*n);
     document.write('<br/>');
   }
@@ -39,6 +37,11 @@ function exo4() {
   var nb;
   nb = prompt();
   alert(nb.length);
+}
+
+function exo5() {
+  var nb;
+  nb = prompt();
 
   var nb;
   nb = prompt("tapez un nombre");
@@ -48,7 +51,7 @@ function exo4() {
     document.write("le nombre est impaire")
 }
 
-function exo5() {
+function exo6() {
   var val = prompt ('tapez un nombre entre 10 et 20: ');
   if(val < 20 && val > 10) {
     alert('ok!');
@@ -58,7 +61,7 @@ function exo5() {
   }
 }
 
-function exo6() {
+function exo7() {
   var nombre = prompt("Veuillez entrer un nombre:");
 
   document.write("Les dix nombres suivants "+nombre+ " sont :");
@@ -69,7 +72,7 @@ function exo6() {
   }
 }
 
-function exo7() {
+function exo8() {
   var z
   var nombre = prompt("Veuillez entrer un nombre:");
   for(var i=0; i<10; i++){
@@ -78,7 +81,7 @@ function exo7() {
     }
 }
 
-function exo8() {
+function exo9() {
   var nb = prompt("Nombre");
 
   function sommeTotale(nb){
@@ -92,7 +95,7 @@ function exo8() {
   alert(sommeTotale(nb));
 }
 
-function exo9() {
+function exo10() {
   var n;
   n = prompt("Age :");
   if (n >=6 && n <=7) {
@@ -108,4 +111,5 @@ function exo9() {
   }
 }
   </script>
+}
 </html>
