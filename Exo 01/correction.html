@@ -17,9 +17,39 @@
       <a href="#" onclick="exo9()">Exo 9</a>
       <a href="#" onclick="exo10()">Exo 10</a>
     </div>
-
+    <div>
+        <div>
+          <a href="#" onclick="addTo(this.innerHTML)">0</a>
+          <a href="#" onclick="addTo(this.innerHTML)">1</a>
+          <a href="#" onclick="addTo(this.innerHTML)">2</a>
+          <a href="#" onclick="addTo(this.innerHTML)">3</a>
+          <a href="#" onclick="addTo(this.innerHTML)">4</a>
+          <a href="#" onclick="addTo(this.innerHTML)">5</a>
+          <a href="#" onclick="addTo(this.innerHTML)">6</a>
+          <a href="#" onclick="addTo(this.innerHTML)">7</a>
+          <a href="#" onclick="addTo(this.innerHTML)">8</a>
+          <a href="#" onclick="addTo(this.innerHTML)">9</a>
+        </div>
+        <div>
+          <a href="#" onclick="addTo(this.innerHTML)">+</a>
+          <a href="#" onclick="addTo(this.innerHTML)">-</a>
+          <a href="#" onclick="addTo(this.innerHTML)">/</a>
+          <a href="#" onclick="addTo(this.innerHTML)">*</a>
+        </div>
+    </div>
+    <input type="text" name="" id="result">
   </body>
   <script type="text/javascript">
+
+    function addTo(value) {
+      var current = document.getElementById("result").value;
+      document.getElementById("result").value = current.concat(value);  
+    }
+
+    function somme() {
+        var result = eval(document.getElementById("result").value);
+        console.log(result);
+    }
 
     function exo1()
     {

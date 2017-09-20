@@ -1,11 +1,14 @@
 function getAllLocal() {
   var keys = new Array;
   for (var i = 0; i < localStorage.length; i++) {
+    console.log(i);
     keys[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
   }
 
   return keys;
 }
+
+console.log(localStorage);
 
 (function listing(){
   var datas = getAllLocal();
