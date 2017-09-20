@@ -10,24 +10,26 @@ function getAllLocal() {
 (function listing(){
   var datas = getAllLocal();
   for (var variable in datas) {
+    console.log(variable);
     if (datas.hasOwnProperty(variable)) {
-      $('.listing').append('<li class="list-group-item"><label>'+datas[variable]+'</label>' +
-          '<input type="button" data-id="'+variable+'" name="name" class="btn delete btn-danger pull-right" value="Remove"></li>');
+      document.getElementById("listing").innerHTML += '<li class="list-group-item"><label>'+datas[variable]+'</label>' +
+          '<input type="button" onclick="deleteAction('+variable+')" name="name" class="btn delete btn-danger pull-right" value="Remove"></li>';
     }
   }
 })();
 
-$('#checkAll').submit(function(e) {
+document.getElementById("checkAll").onsubmit = function(e){
   e.stopPropagation();
   e.preventDefault();
-  var newTodo = $('.add-todo').val();
+  var newTodo = document.getElementById("todo").value;
+  console.log(newTodo);
   localStorage.setItem(new Date().valueOf(), newTodo);
-  $('.add-todo').val('');
+  document.getElementById("todo").value = null;
   window.location.reload();
-});
+};
 
-$('.delete').click( function(){
-  var idTodo = $(this).attr('data-id');
+
+function deleteAction(idTodo){
   localStorage.removeItem(idTodo);
-  $(".listing").find("[data-id='" + idTodo + "']").parent('li').remove();
-});
+  window.location.reload()
+}
