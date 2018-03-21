@@ -12,9 +12,7 @@ $(function() {
     });
 
     $( "#result" ).click(function() {
-        var content = calculatrice.val();
-        var result = eval(content);
-        calculatrice.val(result);
+        calculatrice.val(eval(calculatrice.val()));
     });
 });
 
