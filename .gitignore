@@ -3,5 +3,5 @@
 
 # IDE
 .idea/*
-
+.DS*
 example/node_modules/
