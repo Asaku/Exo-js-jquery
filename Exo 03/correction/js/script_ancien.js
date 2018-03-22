@@ -5,11 +5,9 @@ var position = function(){
     var marioPosition = mario.offset();
     var cubePosition  = cube.offset();
     if (marioPosition.top < cubePosition.top) {
-            console.log('ho');
         if(marioPosition.left > 255 && marioPosition < 305){
             $("#cube").toggle("explode");
-            console.log('yeah');
-        }    
+        }
     };
 };
  //////////////////////////////////////////////// DROITE /////////////////////////////////////
@@ -46,7 +44,7 @@ var droite = function(){
 
  var sautDiagonal = function(){
     $("#mario img").attr('src','../img/mario_jump.png');
-    if ( $('.marioinverse').hasClass('marioinverse') ) {
+    if ($('.marioinverse').hasClass('marioinverse')) {
         $("#mario img").animate({left: '-=50', bottom: '+=102'}, 500); // saut en haut Ã  gauche
         $("#mario img").animate({left: '-=50', bottom: '-=102'}, 500);
     }else{
@@ -61,7 +59,7 @@ var droite = function(){
     }, 500);
  };
 
- //////////////////////////////////////////////// GOOMBA /////////////////////////////////////
+//////////////////////////////////////////////// GOOMBA /////////////////////////////////////
 
 var goomba = function(){
     $("#goomba img").animate({left:"120px"},3000);
@@ -100,5 +98,4 @@ $(document).keydown(function(event){
             jump_sound.play();
         break;
     }
-
 });
