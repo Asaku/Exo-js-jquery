@@ -17,40 +17,8 @@
       <a href="#" onclick="exo9()">Exo 9</a>
       <a href="#" onclick="exo10()">Exo 10</a>
     </div>
-    <div>
-        <div>
-          <a href="#" onclick="addTo(this.innerHTML)">0</a>
-          <a href="#" onclick="addTo(this.innerHTML)">1</a>
-          <a href="#" onclick="addTo(this.innerHTML)">2</a>
-          <a href="#" onclick="addTo(this.innerHTML)">3</a>
-          <a href="#" onclick="addTo(this.innerHTML)">4</a>
-          <a href="#" onclick="addTo(this.innerHTML)">5</a>
-          <a href="#" onclick="addTo(this.innerHTML)">6</a>
-          <a href="#" onclick="addTo(this.innerHTML)">7</a>
-          <a href="#" onclick="addTo(this.innerHTML)">8</a>
-          <a href="#" onclick="addTo(this.innerHTML)">9</a>
-        </div>
-        <div>
-          <a href="#" onclick="addTo(this.innerHTML)">+</a>
-          <a href="#" onclick="addTo(this.innerHTML)">-</a>
-          <a href="#" onclick="addTo(this.innerHTML)">/</a>
-          <a href="#" onclick="addTo(this.innerHTML)">*</a>
-        </div>
-    </div>
-    <input type="text" name="" id="result">
   </body>
   <script type="text/javascript">
-
-    function addTo(value) {
-      var current = document.getElementById("result").value;
-      document.getElementById("result").value = current.concat(value);  
-    }
-
-    function somme() {
-        var result = eval(document.getElementById("result").value);
-        console.log(result);
-    }
-
     function exo1()
     {
       for (var i = 0; i < 500; i++) {
@@ -77,20 +45,17 @@
 
     function exo4() {
       var nb;
-      nb = prompt();
+      nb = prompt("tapez un nombre");
       alert(nb.length);
     }
 
     function exo5() {
       var nb;
-      nb = prompt();
-
-      var nb;
       nb = prompt("tapez un nombre");
       if (nb%2 == 0)
-        document.write("le nombre est paire")
+        document.write("le nombre est paire");
       else
-        document.write("le nombre est impaire")
+        document.write("le nombre est impaire");
     }
 
     function exo6() {
@@ -115,7 +80,7 @@
     }
 
     function exo8() {
-      var z
+      var z;
       var nombre = prompt("Veuillez entrer un nombre:");
       for(var i=0; i<10; i++){
         z =  nombre*i;
